@@ -292,7 +292,64 @@ The project can be improved in several areas:
 - Add Docker and Docker Compose support for reproducible deployment.
 - Improve monitoring with historical KPI trends and automated alerts.
 
-## 14. Repository
+## 14.Docker Deployment
+
+The project supports Docker Compose for automated data collection.
+
+### Requirements
+- Docker Desktop
+- Docker Compose
+- YouTube Data API Key
+
+### Configuration
+
+Create a `.env` file in the project root and configure the required environment variables. Refer to `.env.example` for the required variable names.
+
+### Build and Run
+
+```bash
+docker compose build
+docker compose up -d
+```
+
+### Monitor Logs
+
+```bash
+docker compose logs -f
+```
+
+### Stop the Collector
+
+```bash
+docker compose down
+```
+
+### Persistent Storage
+
+Docker Compose mounts the following directories to the host machine:
+
+- `./data` — collected JSONL data
+- `./logs` — execution and monitoring logs
+- `./reports` — KPI reports
+
+## YouTube Comments Collection
+
+The YouTube collector supports:
+- Search pagination using `nextPageToken`
+- Video statistics collection
+- Top-level comment collection for selected popular videos
+- Handling videos with disabled comments
+- Comment collection status tracking
+
+## Scheduling
+
+The scheduler runs:
+- News collection every 5 minutes
+- YouTube collection every 1 hour
+
+All schedules use the Asia/Bangkok timezone.
+
+## 15. Repository
 
 GitHub: https://github.com/pungseon/data-collector
 
