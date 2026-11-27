@@ -1,0 +1,16 @@
+services:
+  data-collector:
+    build: .
+    container_name: data-collector
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+
+    environment:
+      TZ: Asia/Bangkok
