@@ -1,0 +1,93 @@
+{
+    "generated_at": "2026-11-27T06:17:08.965499+00:00",
+    "execution": {
+        "total_runs": 57,
+        "successful": 57,
+        "failed": 0,
+        "success_rate": 100.0,
+        "average_duration": 1.63,
+        "p95_duration": 4.7,
+        "malformed_logs": 0
+    },
+    "news_quality": {
+        "total_records": 51,
+        "field_completeness": 100.0,
+        "missing_field_values": 0,
+        "duplicates": 0
+    },
+    "news_freshness": {
+        "newly_discovered": {
+            "count": 15,
+            "median": 51.32,
+            "p95": 213.01,
+            "within_15_min_count": 0,
+            "within_15_min_percent": 0.0
+        },
+        "historical": {
+            "count": 36,
+            "median": 210.36,
+            "p95": 519.85,
+            "within_15_min_count": 0,
+            "within_15_min_percent": 0.0
+        },
+        "invalid_timestamps": 0
+    },
+    "news_requests": {
+        "total_runs": 52,
+        "total_requests": 67,
+        "successful_requests": 67,
+        "failed_requests": 0,
+        "success_rate": 100.0,
+        "malformed_logs": 0
+    },
+    "news_duration": {
+        "total_rounds": 52,
+        "average_seconds": 1.4,
+        "p95_seconds": 3.61,
+        "within_interval": 52,
+        "within_interval_percent": 100.0,
+        "interval_seconds": 300,
+        "malformed_logs": 0
+    },
+    "news_coverage": {
+        "total_rounds": 46,
+        "average_coverage": 100.0,
+        "coverage_pass_rate": 100.0,
+        "rounds_meeting_target": 46,
+        "target_percent": 95,
+        "covered_urls_sum": 348,
+        "discovered_urls_sum": 348
+    },
+    "discovery_latency": {
+        "measured_articles": 15,
+        "median_minutes": 51.22,
+        "p95_minutes": 212.78,
+        "within_15_min_count": 0,
+        "within_15_min_percent": 0.0,
+        "invalid_records": 0,
+        "definition": "first_seen_at - published_at"
+    },
+    "publication_latency": {
+        "measured_articles": 15,
+        "median_minutes": 51.32,
+        "p95_minutes": 213.01,
+        "within_15_min_count": 0,
+        "within_15_min_percent": 0.0,
+        "invalid_records": 0,
+        "definition": "collected_at - published_at"
+    },
+    "news_malformed": 0,
+    "youtube": {
+        "total_records": 1444,
+        "malformed_records": 0
+    },
+    "kpi_checks": {
+        "freshness_within_15_min": false,
+        "freshness_p95": false,
+        "news_coverage": true,
+        "request_success_rate": true,
+        "field_completeness": true,
+        "zero_duplicates": true,
+        "round_duration": true
+    }
+}
