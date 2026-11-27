@@ -1,4 +1,4 @@
-# Mini Data Collector
+# Data Collector
 
 A Python-based data collection system that gathers public news articles from Thai PBS and video data from YouTube Data API v3. The project focuses on reliable data collection, hybrid discovery, deduplication, data quality validation, and operational monitoring.
 
